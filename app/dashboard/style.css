@@ -1,0 +1,54 @@
+.dashboard {
+    display: flex;
+}
+
+.left {
+    width: 40%;
+    min-height: 100vh;
+    position: relative;
+    box-shadow: 2px 0 0 0 #ccc;
+
+}
+
+.right {
+    width: 60%;
+    min-height: 100vh;
+    background-color: #f1f3f5;
+    position: relative;
+    box-shadow: 0 0 0 .7px #ccc;
+}
+
+.profile_img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+@media (max-width:770px) {
+    .right {
+        display: none;
+    }
+
+    .left {
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 770px) {
+    #visible {
+        display: block;
+        width: 100%;
+        transition: ease all .7s;
+    
+    }
+    
+    #hidden {
+        width: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: ease all .3s;
+    
+    }
+}

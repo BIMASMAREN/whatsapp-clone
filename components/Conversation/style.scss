@@ -1,0 +1,111 @@
+$avatarSize: 45px;
+$inputPadding: 1em;
+$inputFontSize: 31px;
+
+.Conversation {
+  width: 100%;
+  max-height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  color: white;
+  background-image: url('../../public/conversation_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav {
+    padding: 8px 4px;
+    box-shadow: 0 0 0 0 #ccc;
+    display: grid;
+    background-color: #f0f2f5;
+    grid-template-columns: 10% 85% 5%;
+    color: black;
+
+    img {
+      width: $avatarSize;
+      height: $avatarSize;
+      border-radius: 50%;
+    }
+  }
+
+  .input {
+    position: absolute;
+    bottom: 0;
+    padding: $inputPadding;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    align-items: center;
+
+    input {
+      width: 90%;
+      border: none;
+      outline: none;
+      background-color: #f0f2f5;
+      padding: 8px;
+      border-radius: 5px;
+      color: black;
+    }
+
+    span {
+      font-size: $inputFontSize;
+      color: #84929c;
+      cursor: pointer;
+    }
+  }
+
+  .messages_list {
+    width: 100%;
+    min-height: 85vh;
+    max-height: 85vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .Status_bar {
+
+    width: 100%;
+    background-color: #ccc;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+
+    .profile_picture {
+      display: flex;
+      align-items: center;
+      min-width: 10%;
+      max-width: 35%;
+      margin-right: 5px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    }
+
+    .name_date {
+      flex-grow: 1;
+
+    }
+
+    .options {
+      text-align: right;
+    }
+
+  }
+}

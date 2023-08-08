@@ -1,0 +1,70 @@
+.Message_ {
+  width: auto;
+  max-width: 35vw;
+  min-height: max-content;
+  background-color: #d8fdd2;
+  padding: 6px;
+  border-radius: 5px;
+  color: #131313;
+  margin: 5px 5% 0 5%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Message_ .message {
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.Message_ .send_time {
+  font-size: small;
+  margin-left: auto;
+  /* Push the send time to the right */
+
+}
+
+/* Style for sent messages */
+.Message_.sender {
+  align-self: flex-end;
+}
+
+.Message_.reciver {
+  align-self: flex-start;
+}
+
+/* Style for the edge border on the left side of received messages */
+.Message_.reciver::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 1px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #d8fdd2;
+  border-radius: 5px;
+}
+
+/* Style for the edge border on the right side of sent messages */
+.Message_.sender::before {
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: -0px;
+  transform: rotate(180deg);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #d8fdd2;
+  /* Border color should match the message background */
+  margin-right: 5px;
+  border-radius: 5px;
+
+}
+
+@media (max-width: 450px) {
+  .Message_ {
+    max-width: 70vw;
+  }
+}

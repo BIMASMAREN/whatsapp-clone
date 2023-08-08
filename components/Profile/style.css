@@ -1,0 +1,54 @@
+.Slide {
+    min-height: 100vh;
+    background-color: #f1f3f5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+span {
+    cursor: pointer;
+}
+
+.Slide .back_bar {
+    width: 100%;
+    background-color: #018169;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.Slide .profile_picture {
+    width: 100%;
+    height: 40%;
+    position: relative;
+}
+
+.Slide .picture-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.Slide .username {
+    background-color: #fffefe;
+    box-shadow: 0 2px 0 0 #ccc;
+    padding: .8em 0;
+}
+
+.Slide .username .name {
+    color: #11bd9d;
+}
+
+.progress_bar {
+    background-color: rgb(161, 81, 240);
+    height: 5px;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 4px 4px 0;
+    transition: .7s ease-in-out all;
+
+}

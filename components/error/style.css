@@ -1,0 +1,12 @@
+.errorMessage {
+    width: max-content;
+    height: 40px;
+    border-radius: 5px;
+    padding: 4px;
+    background-color: #001C30;
+    color: #ffff;
+    position: absolute;
+    top: 3%;
+    display: flex;
+    align-items: center;
+}
